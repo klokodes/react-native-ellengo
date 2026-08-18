@@ -21,7 +21,27 @@
       "Bash(xargs -r kill)",
       "Bash(gh auth *)",
       "Bash(gh repo *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Read(//Users/khloeyen/**)",
+      "Bash(command -v gh)",
+      "Read(//usr/local/bin/**)",
+      "Bash(git credential-osxkeychain *)",
+      "Bash(security find-internet-password *)",
+      "Bash(git ls-remote *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/repos/klokodes/react-native-ellengo)",
+      "Bash(npx playwright *)",
+      "Bash(nohup npx expo start --web --port 8081)",
+      "Bash(echo \"started pid $!\")",
+      "Bash(curl -sf http://localhost:8081 -o /dev/null -w \"http_status:%{http_code}\\\\n\")",
+      "Bash(ps -p 86423 -o pid,command)",
+      "Bash(curl -s http://localhost:8081)",
+      "Bash(curl -sI http://localhost:8081)",
+      "Bash(node /private/tmp/claude-501/-Users-khloeyen-Desktop-thai-duolingo/80cf0fd0-4661-4605-ae88-5302193f3f32/scratchpad/screenshot.js)",
+      "Bash(npm init *)"
     ],
     "additionalDirectories": [
       "/Users/khloeyen/Desktop/thai_duolingo/src"

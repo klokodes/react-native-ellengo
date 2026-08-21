@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx expo *)",
+      "Bash(node -e \"const m = require\\('/Users/khloeyen/Desktop/thai_duolingo/node_modules/nativewind/metro'\\); console.log\\(Object.keys\\(m\\)\\)\")",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const m = require\\('/Users/khloeyen/Desktop/thai_duolingo/node_modules/nativewind/dist/commonjs/metro.js'\\); console.log\\(Object.keys\\(m\\)\\)\")",
+      "WebFetch(domain:www.nativewind.dev)",
+      "Bash(node screenshot.js)",
+      "Bash(python3 -c ' *)",
+      "Bash(sips -g hasAlpha -g pixelWidth -g pixelHeight /Users/khloeyen/Desktop/thai_duolingo/assets/mascot-welcome.png)",
+      "Bash(node -e ' *)",
+      "Bash(curl -sf http://localhost:8081 -o /dev/null -w \"http_status:%{http_code}\\\\n\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(node screenshot2.js)",
+      "WebFetch(domain:docs.expo.dev)",
+      "Bash(mkdir -p /Users/khloeyen/Desktop/thai_duolingo/src/components/auth)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"started pid $!\")",
+      "Bash(npx playwright *)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(npm init *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8081 --max-time 5)",
+      "Bash(lsof -ti:8081 -sTCP:LISTEN)",
+      "Bash(ps -p 95906 -o pid,command)",
+      "Bash(jobs -l)",
+      "Bash(curl -s http://localhost:8081)",
+      "Bash(node verify.js)",
+      "Bash(git ls-remote *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Read(//Users/khloeyen/**)",
+      "Skill(clerk-expo)",
+      "Skill(clerk-expo:*)",
+      "Bash(curl -s \"https://engaging-civet-6920.clerk.accounts.dev/v1/environment?_is_native=true\")",
+      "Bash(python3 -m json.tool)"
+    ],
+    "additionalDirectories": [
+      "/Users/khloeyen/Desktop/thai_duolingo/src/components"
+    ]
+  }
+}

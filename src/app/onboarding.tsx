@@ -7,8 +7,8 @@ export default function Onboarding() {
   const router = useRouter();
 
   return (
-    <SafeAreaView className="flex-1 bg-background" edges={["top", "bottom"]}>
-      <View className="flex-1 px-6">
+    <SafeAreaView style={{ flex: 1 }} edges={["top", "bottom"]}>
+      <View className="flex-1 bg-background px-6">
         {/* Logo */}
         <View className="flex-row items-center gap-2 pt-2">
           <Image

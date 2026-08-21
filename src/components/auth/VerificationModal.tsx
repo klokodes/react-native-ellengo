@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { KeyboardAvoidingView, Modal, Platform, Pressable, Text, TextInput, View } from "react-native";
-import { useRouter } from "expo-router";
+
+import { showAlert } from "@/lib/alert";
 
 const CODE_LENGTH = 6;
 
@@ -8,24 +9,32 @@ type VerificationModalProps = {
   visible: boolean;
   onClose: () => void;
   email?: string;
+  onSubmitCode: (code: string) => Promise<{ success: boolean; message?: string }>;
 };
 
-export function VerificationModal({ visible, onClose, email }: VerificationModalProps) {
-  const router = useRouter();
+export function VerificationModal({ visible, onClose, email, onSubmitCode }: VerificationModalProps) {
   const [code, setCode] = useState("");
+  const [isVerifying, setIsVerifying] = useState(false);
   const inputRef = useRef<TextInput>(null);
 
   useEffect(() => {
     if (visible) {
       setCode("");
+      setIsVerifying(false);
     }
   }, [visible]);
 
-  const handleChangeCode = (value: string) => {
+  const handleChangeCode = async (value: string) => {
     const digits = value.replace(/[^0-9]/g, "").slice(0, CODE_LENGTH);
     setCode(digits);
     if (digits.length === CODE_LENGTH) {
-      router.replace("/");
+      setIsVerifying(true);
+      const result = await onSubmitCode(digits);
+      setIsVerifying(false);
+      if (!result.success) {
+        showAlert("Incorrect code", result.message ?? "Please try again.");
+        setCode("");
+      }
     }
   };
 
@@ -67,6 +76,7 @@ export function VerificationModal({ visible, onClose, email }: VerificationModal
               ref={inputRef}
               value={code}
               onChangeText={handleChangeCode}
+              editable={!isVerifying}
               keyboardType="number-pad"
               autoFocus
               maxLength={CODE_LENGTH}

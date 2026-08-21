@@ -1,7 +1,18 @@
-import { Link } from "expo-router";
+import { useAuth } from "@clerk/expo";
+import { Link, Redirect } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
+  const { isLoaded, isSignedIn } = useAuth();
+
+  if (!isLoaded) {
+    return null;
+  }
+
+  if (!isSignedIn) {
+    return <Redirect href="/onboarding" />;
+  }
+
   return (
     <View className="flex-1 items-center justify-center gap-2 bg-background px-6">
       <Text className="text-h1 font-poppins-bold text-primary">ellengo</Text>

@@ -21,6 +21,9 @@ export default function Index() {
       <Link href="/onboarding" className="text-body font-poppins-semibold text-primary mt-4">
         Go to onboarding →
       </Link>
+      <Link href="/language-selection" className="text-body font-poppins-semibold text-primary mt-2">
+        Choose a language →
+      </Link>
     </View>
   );
 }
